@@ -1,0 +1,6 @@
+Sitemap: https://farishan.vercel.app/sitemap.xml
+
+User-agent: *
+Allow: /*
+
+Disallow: /api/*
