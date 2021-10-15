@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { request } from '../lib/datocms';
 import { StructuredText } from 'react-datocms';
-import Image from 'next/next';
+import Image from 'next/image';
 
 const HOMEPAGE_QUERY = `query HomePage($limit: IntType) {
   allArticles (first: $limit) {
