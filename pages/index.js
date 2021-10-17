@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { request } from '../lib/datocms';
 import { StructuredText } from 'react-datocms';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const HOMEPAGE_QUERY = `query HomePage($limit: IntType) {
   allArticles (first: $limit) {
@@ -159,6 +160,25 @@ export default function Home({ data }) {
               </p>
             </div>
           </a>
+        </div>
+
+        <div className="flex flex-wrap items-center justify-between w-full max-w-4xl mt-6 -mx-3">
+          <div className="px-3 w-full">
+            <div className="flex flex-wrap justify-center p-6 mt-6 text-left shadow-md w-full rounded-xl hover:shadow-xl duration-100 transition-all focus:text-blue-600 bg-brand-dark">
+              <nav className="space-x-4 space-y-4">
+                <Link href="/gamedev">
+                  <a className="underline dark:hover:text-brand-primary">
+                    Game Dev
+                  </a>
+                </Link>
+                <Link href="/game-mechanic">
+                  <a className="underline dark:hover:text-brand-primary">
+                    Game Mechanic
+                  </a>
+                </Link>
+              </nav>
+            </div>
+          </div>
         </div>
 
         {data && data.allArticles && (

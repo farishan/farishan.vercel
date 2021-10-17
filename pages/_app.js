@@ -1,5 +1,6 @@
 import 'tailwindcss/tailwind.css';
 import Script from 'next/script';
+import NextNprogress from 'nextjs-progressbar';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -18,6 +19,13 @@ function MyApp({ Component, pageProps }) {
               gtag('config', 'G-F5MG64T5XL');
             `}
       </Script>
+      <NextNprogress
+        color="#29D"
+        startPosition={0.3}
+        stopDelayMs={200}
+        height={5}
+        showOnShallow={true}
+      />
       <div className="dark">
         <Component {...pageProps} />
       </div>
